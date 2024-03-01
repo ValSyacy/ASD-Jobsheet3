@@ -4,17 +4,21 @@ public class PersegiPanjangDemo02 {
     public static void main(String[] args) {
         Scanner Input02 = new Scanner(System.in);
 
-        PersegiPanjang02[] arrayOfPersegiPanjang02 = new PersegiPanjang02[3];
+        System.out.print("Masukkan jumlah persegi panjang: ");
+        int jumlahPersegi = Input02.nextInt();
 
-        for (int i = 0; i < 3; i++) {
-            arrayOfPersegiPanjang02[i] = new PersegiPanjang02();
+        PersegiPanjang02[] arrayOfPersegiPanjang02 = new PersegiPanjang02[jumlahPersegi];
+        int panjang, lebar;
 
+        for (int i = 0; i < jumlahPersegi; i++) {
             System.out.println("Persegi panjang ke-" + (i + 1));
             System.out.print("Masukkan panjang: ");
-            arrayOfPersegiPanjang02[i].panjang = Input02.nextInt();
+            panjang = Input02.nextInt();
             System.out.print("Masukkan lebar: ");
-            arrayOfPersegiPanjang02[i].lebar = Input02.nextInt();
+            lebar = Input02.nextInt();
+            arrayOfPersegiPanjang02[i] = new PersegiPanjang02(panjang, lebar);
         }
+
         PersegiPanjang02.cetakInfo(arrayOfPersegiPanjang02);
     }
 }
