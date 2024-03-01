@@ -1,21 +1,24 @@
+import java.util.Scanner;
+
 public class PersegiPanjangDemo02 {
     public static void main(String[] args) {
+        Scanner Input02 = new Scanner(System.in);
+
         PersegiPanjang02[] arrayOfPersegiPanjang02 = new PersegiPanjang02[3];
 
-        arrayOfPersegiPanjang02[0] = new PersegiPanjang02();
-        arrayOfPersegiPanjang02[0].panjang = 110;
-        arrayOfPersegiPanjang02[0].lebar = 30;
+        for (int i = 0; i < 3; i++) {
+            arrayOfPersegiPanjang02[i] = new PersegiPanjang02();
 
-        arrayOfPersegiPanjang02[1] = new PersegiPanjang02();
-        arrayOfPersegiPanjang02[1].panjang = 80;
-        arrayOfPersegiPanjang02[1].lebar = 40;
+            System.out.println("Persegi panjang ke-" + (i + 1));
+            System.out.print("Masukkan panjang: ");
+            arrayOfPersegiPanjang02[i].panjang = Input02.nextInt();
+            System.out.print("Masukkan lebar: ");
+            arrayOfPersegiPanjang02[i].lebar = Input02.nextInt();
+        
+        }
 
-        arrayOfPersegiPanjang02[2] = new PersegiPanjang02();
-        arrayOfPersegiPanjang02[2].panjang = 100;
-        arrayOfPersegiPanjang02[2].lebar = 20;
-
-        System.out.println("Persegi panjang ke-1, panjang: " + arrayOfPersegiPanjang02[0].panjang + ", lebar: " + arrayOfPersegiPanjang02[0].lebar);
-        System.out.println("Persegi panjang ke-2, panjang: " + arrayOfPersegiPanjang02[1].panjang + ", lebar: " + arrayOfPersegiPanjang02[1].lebar);
-        System.out.println("Persegi panjang ke-3, panjang: " + arrayOfPersegiPanjang02[2].panjang + ", lebar: " + arrayOfPersegiPanjang02[2].lebar);
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Persegi panjang ke-" + (i + 1) + ", panjang: " + arrayOfPersegiPanjang02[i].panjang + ", lebar: " + arrayOfPersegiPanjang02[i].lebar);
+        }
     }
 }
