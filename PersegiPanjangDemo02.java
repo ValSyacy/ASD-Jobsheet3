@@ -14,11 +14,7 @@ public class PersegiPanjangDemo02 {
             arrayOfPersegiPanjang02[i].panjang = Input02.nextInt();
             System.out.print("Masukkan lebar: ");
             arrayOfPersegiPanjang02[i].lebar = Input02.nextInt();
-        
         }
-
-        for (int i = 0; i < 3; i++) {
-            System.out.println("Persegi panjang ke-" + (i + 1) + ", panjang: " + arrayOfPersegiPanjang02[i].panjang + ", lebar: " + arrayOfPersegiPanjang02[i].lebar);
-        }
+        PersegiPanjang02.cetakInfo(arrayOfPersegiPanjang02);
     }
 }
